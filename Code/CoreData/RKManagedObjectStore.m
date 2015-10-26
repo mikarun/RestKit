@@ -337,7 +337,10 @@ static RKManagedObjectStore *defaultObjectStore = nil;
     // Allow inferred migration from the original version of the application.
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                              [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
-                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption,
+                             @{@"journal_mode": @"DELETE"}, NSSQLitePragmasOption,
+                             nil];
+    
 
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         if (self.delegate != nil && [self.delegate respondsToSelector:@selector(managedObjectStore:didFailToCreatePersistentStoreCoordinatorWithError:)]) {

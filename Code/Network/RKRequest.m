@@ -686,7 +686,6 @@ RKRequestMethod RKRequestMethodTypeFromName(NSString *methodName) {
     self.loading = NO;
     self.loaded = YES;
 
-    RKLogInfo(@"Status Code: %ld", (long)[response statusCode]);
     RKLogDebug(@"Body: %@", [response bodyAsString]);
 
     self.response = response;
