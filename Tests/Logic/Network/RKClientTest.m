@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "RKTestEnvironment.h"
 #import "RKURL.h"
 
@@ -158,7 +158,7 @@
     [params setValue:@"aa@aa.com" forParam:@"email"];
     RKTestResponseLoader *loader = [RKTestResponseLoader responseLoader];
     [client put:@"/userprofile" params:params delegate:loader];
-    STAssertNoThrow([loader waitForResponse], @"");
+    XCTAssertNoThrow([loader waitForResponse], @"");
     [loader waitForResponse];
     assertThatBool(loader.wasSuccessful, is(equalToBool(NO)));
 }

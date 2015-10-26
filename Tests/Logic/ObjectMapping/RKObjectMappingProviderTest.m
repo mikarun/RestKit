@@ -89,7 +89,7 @@
 {
     RKObjectMappingProvider *mappingProvider = [RKObjectMappingProvider mappingProvider];
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[NSMutableArray class]];
-    STAssertNoThrow([mappingProvider setMapping:mapping context:1], nil);
+    XCTAssertNoThrow([mappingProvider setMapping:mapping context:1]);
 }
 
 - (void)testRetrievalOfMapping
@@ -112,14 +112,14 @@
     RKObjectMappingProvider *mappingProvider = [RKObjectMappingProvider mappingProvider];
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[NSMutableArray class]];
     [mappingProvider setMapping:mapping context:1];
-    STAssertThrows([mappingProvider mappingsForContext:1], @"Expected collection mapping retrieval to throw due to storage of single mapping");
+    XCTAssertThrows([mappingProvider mappingsForContext:1], @"Expected collection mapping retrieval to throw due to storage of single mapping");
 }
 
 - (void)testAddingMappingToCollectionContext
 {
     RKObjectMappingProvider *mappingProvider = [RKObjectMappingProvider mappingProvider];
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[NSMutableArray class]];
-    STAssertNoThrow([mappingProvider addMapping:mapping context:1], nil);
+    XCTAssertNoThrow([mappingProvider addMapping:mapping context:1]);
 }
 
 - (void)testRetrievalOfMappingCollection
@@ -160,14 +160,14 @@
 {
     RKObjectMappingProvider *mappingProvider = [RKObjectMappingProvider mappingProvider];
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[NSMutableArray class]];
-    STAssertThrows([mappingProvider removeMapping:mapping context:1], @"Removal of mapping not included in context should raise an error.");
+    XCTAssertThrows([mappingProvider removeMapping:mapping context:1], @"Removal of mapping not included in context should raise an error.");
 }
 
 - (void)testSettingMappingForKeyPathInContext
 {
     RKObjectMappingProvider *mappingProvider = [RKObjectMappingProvider mappingProvider];
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[NSMutableArray class]];
-    STAssertNoThrow([mappingProvider setMapping:mapping forKeyPath:@"testing" context:1], nil);
+    XCTAssertNoThrow([mappingProvider setMapping:mapping forKeyPath:@"testing" context:1]);
 }
 
 - (void)testRetrievalOfMappingForKeyPathInContext

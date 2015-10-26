@@ -43,7 +43,6 @@
 		2513504E14B8FE6B00A7E893 /* RKConfigurationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2513504D14B8FE6B00A7E893 /* RKConfigurationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2513504F14B8FE6B00A7E893 /* RKConfigurationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2513504D14B8FE6B00A7E893 /* RKConfigurationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160D1A14564E810060A5C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D1914564E810060A5C5 /* Foundation.framework */; };
-		25160D2814564E820060A5C5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D2714564E820060A5C5 /* SenTestingKit.framework */; };
 		25160D2A14564E820060A5C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D2914564E820060A5C5 /* UIKit.framework */; };
 		25160D2B14564E820060A5C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D1914564E810060A5C5 /* Foundation.framework */; };
 		25160DD5145650490060A5C5 /* CoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160D46145650490060A5C5 /* CoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -160,7 +159,6 @@
 		25160E51145650490060A5C5 /* RKSearchEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DC8145650490060A5C5 /* RKSearchEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25160E52145650490060A5C5 /* RKSearchEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160DC9145650490060A5C5 /* RKSearchEngine.m */; };
 		25160E53145650490060A5C5 /* Support.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160DCA145650490060A5C5 /* Support.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25160E79145651060060A5C5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160D2714564E820060A5C5 /* SenTestingKit.framework */; };
 		25160E7A145651060060A5C5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160E63145651060060A5C5 /* Cocoa.framework */; };
 		25160E7D145651060060A5C5 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25160E62145651060060A5C5 /* RestKit.framework */; };
 		25160ECA1456532C0060A5C5 /* GCOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 25160E8F1456532C0060A5C5 /* GCOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -794,8 +792,7 @@
 		2513504D14B8FE6B00A7E893 /* RKConfigurationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKConfigurationDelegate.h; sourceTree = "<group>"; };
 		25160D1614564E810060A5C5 /* libRestKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRestKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		25160D1914564E810060A5C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		25160D2614564E820060A5C5 /* RestKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25160D2714564E820060A5C5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		25160D2614564E820060A5C5 /* RestKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25160D2914564E820060A5C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		25160D46145650490060A5C5 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
 		25160D47145650490060A5C5 /* NSManagedObject+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ActiveRecord.h"; sourceTree = "<group>"; };
@@ -1256,7 +1253,6 @@
 				2516112C1456F51D0060A5C5 /* libxml2.dylib in Frameworks */,
 				2516112B1456F5170060A5C5 /* CFNetwork.framework in Frameworks */,
 				251611291456F50F0060A5C5 /* SystemConfiguration.framework in Frameworks */,
-				25160D2814564E820060A5C5 /* SenTestingKit.framework in Frameworks */,
 				25160D2A14564E820060A5C5 /* UIKit.framework in Frameworks */,
 				25160D2B14564E820060A5C5 /* Foundation.framework in Frameworks */,
 				250CA67E147D8E8F0047D347 /* OCHamcrestIOS.framework in Frameworks */,
@@ -1278,7 +1274,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25160E79145651060060A5C5 /* SenTestingKit.framework in Frameworks */,
 				25160E7A145651060060A5C5 /* Cocoa.framework in Frameworks */,
 				25160E7D145651060060A5C5 /* RestKit.framework in Frameworks */,
 				250CA67D147D8E8B0047D347 /* OCHamcrest.framework in Frameworks */,
@@ -1321,7 +1316,7 @@
 			isa = PBXGroup;
 			children = (
 				25160D1614564E810060A5C5 /* libRestKit.a */,
-				25160D2614564E820060A5C5 /* RestKitTests.octest */,
+				25160D2614564E820060A5C5 /* RestKitTests.xctest */,
 				25160E62145651060060A5C5 /* RestKit.framework */,
 				25160E78145651060060A5C5 /* RestKitFrameworkTests.octest */,
 				259C301615128079003066A2 /* RestKitResources.bundle */,
@@ -1347,7 +1342,6 @@
 				25160F7B145657220060A5C5 /* SystemConfiguration.framework */,
 				25160F161456538B0060A5C5 /* libxml2.dylib */,
 				25160D1914564E810060A5C5 /* Foundation.framework */,
-				25160D2714564E820060A5C5 /* SenTestingKit.framework */,
 				25160D2914564E820060A5C5 /* UIKit.framework */,
 				25160E63145651060060A5C5 /* Cocoa.framework */,
 				25EC1B0014F8078100C3CF3F /* CoreFoundation.framework */,
@@ -2442,8 +2436,8 @@
 			);
 			name = RestKitTests;
 			productName = RestKitTests;
-			productReference = 25160D2614564E820060A5C5 /* RestKitTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productReference = 25160D2614564E820060A5C5 /* RestKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		25160E61145651060060A5C5 /* RestKitFramework */ = {
 			isa = PBXNativeTarget;
@@ -3241,6 +3235,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 					"\"$(SRCROOT)/Tests/Vendor\"",
 					"\"$(SRCROOT)/Tests/Vendor/OCHamcrest\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/Support/RestKit-Prefix.pch";
@@ -3252,7 +3247,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.restkit.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYMROOT = "$(SRCROOT)/Build/Products";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -3264,6 +3258,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 					"\"$(SRCROOT)/Tests/Vendor\"",
 					"\"$(SRCROOT)/Tests/Vendor/OCHamcrest\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/Support/RestKit-Prefix.pch";
@@ -3275,7 +3270,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.restkit.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYMROOT = "$(SRCROOT)/Build/Products";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

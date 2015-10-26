@@ -23,7 +23,7 @@
 
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 #import <RestKit/RestKit.h>
 #import <RestKit/Testing.h>
@@ -35,10 +35,10 @@ RKOAuthClient *RKTestNewOAuthClient(RKTestResponseLoader *loader);
  Base class for RestKit test cases. Provides initialization of testing
  infrastructure.
  */
-@interface RKTestCase : SenTestCase
+@interface RKTestCase : XCTestCase
 @end
 
-@interface SenTestCase (MethodSwizzling)
+@interface XCTestCase (MethodSwizzling)
 - (void)swizzleMethod:(SEL)aOriginalMethod
               inClass:(Class)aOriginalClass
            withMethod:(SEL)aNewMethod

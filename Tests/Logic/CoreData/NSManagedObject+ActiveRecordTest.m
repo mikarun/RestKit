@@ -10,7 +10,7 @@
 #import "NSEntityDescription+RKAdditions.h"
 #import "RKHuman.h"
 
-@interface NSManagedObject_ActiveRecordTest : SenTestCase
+@interface NSManagedObject_ActiveRecordTest : XCTestCase
 
 @end
 

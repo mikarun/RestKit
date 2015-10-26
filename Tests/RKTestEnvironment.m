@@ -58,7 +58,7 @@ RKOAuthClient *RKTestNewOAuthClient(RKTestResponseLoader *loader)
 
 @end
 
-@implementation SenTestCase (MethodSwizzling)
+@implementation XCTestCase (MethodSwizzling)
 
 - (void)swizzleMethod:(SEL)aOriginalMethod
               inClass:(Class)aOriginalClass

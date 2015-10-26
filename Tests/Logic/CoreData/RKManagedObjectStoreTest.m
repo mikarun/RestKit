@@ -40,7 +40,7 @@
     NSString *path = [[RKDirectory applicationDataDirectory] stringByAppendingPathComponent:@"/NonexistantSubdirectory"];
     BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:path];
     assertThatBool(exists, is(equalToBool(NO)));
-    STAssertThrows([RKManagedObjectStore objectStoreWithStoreFilename:@"Whatever.sqlite" inDirectory:path usingSeedDatabaseName:nil managedObjectModel:nil delegate:nil], nil);
+    XCTAssertThrows([RKManagedObjectStore objectStoreWithStoreFilename:@"Whatever.sqlite" inDirectory:path usingSeedDatabaseName:nil managedObjectModel:nil delegate:nil]);
 }
 
 - (void)testCreationOfStoryInApplicationDirectoryCreatesIfNonExistant
@@ -50,7 +50,7 @@
     NSError *error = nil;
     [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
     assertThat(error, is(nilValue()));
-    STAssertNoThrow([RKManagedObjectStore objectStoreWithStoreFilename:@"Whatever.sqlite" inDirectory:nil usingSeedDatabaseName:nil managedObjectModel:nil delegate:nil], nil);
+    XCTAssertNoThrow([RKManagedObjectStore objectStoreWithStoreFilename:@"Whatever.sqlite" inDirectory:nil usingSeedDatabaseName:nil managedObjectModel:nil delegate:nil]);
     BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:path];
     assertThatBool(exists, is(equalToBool(YES)));
 }
